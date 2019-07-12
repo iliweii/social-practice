@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea, button {
+    outline: none;
+    resize: none;
+}
+
+
+.title {
+    width: 100px;
+    height: ;
+}
+
+@font-face {
+    font-family: Adobe Heiti Std R;
+    src: url('../font/adobeheitistd-regular.otf'); 
+}
+
+/* 导航栏 */
+#header {
+    display: flex;
+    height: 11.11vh;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.nav-header {
+    position: relative;
+    width: 85%;
+    padding-left: 5%;
+    margin: 0 auto;
+}
+
+.nav .nav-item {
+    font-size: 3.33vh;
+    font-family: Adobe Heiti Std R;
+    font-weight: normal;
+    color: rgb(66, 41, 41);
+    line-height: 11.11vh;
+}
+
+.nav .nav-item:hover {
+    text-decoration: none;
+}
+
+.nav-logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 11.11vh;
+}
+
+/* banner部分 */
+.banner {
+    width: 100%;
+    height: 88.9vh;
+    position: relative;
+    background-color: rgba(231, 255, 185, 0.925);
+}
+
+.banner point {
+    display: block;
+    position: absolute;
+    background: rgba(121,196,113,1);
+    border-radius: 300px;
+    font-family: Adobe Heiti Std R;
+    font-weight: normal;
+    color: rgba(241,248,216,1);
+    white-space: nowrap;
+    text-align: center;
+    z-index: 20;
+}
+
+.banner line {
+    display: block;
+    position: absolute;
+    height: 1vh;
+    background-color: rgba(255, 255, 255,1);
+    /* background-color: rgba(241,248,216,1); */
+    z-index: 100;
+    transform-origin: left;
+}
+
+.point-a {
+    color: inherit;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.point-a:hover {
+    text-decoration: rgba(241,248,216,1) solid 1px;
+    color: inherit;
+}
+
+.point-1 { height: 10.69vh; width: 10.69vh; line-height: 10.69vh; top: 10.07vh; left: 22.91%; font-size: 02.76vh; }
+.point-2 { height: 16.99vh; width: 16.99vh; line-height: 16.99vh; top: 06.51vh; left: 50.52%; font-size: 03.35vh; }
+.point-3 { height: 16.99vh; width: 16.99vh; line-height: 16.99vh; top: 12.05vh; left: 72.91%; font-size: 03.35vh; }
+.point-4 { height: 16.99vh; width: 16.99vh; line-height: 16.99vh; top: 42.47vh; left: 76.14%; font-size: 03.75vh; }
+.point-5 { height: 16.99vh; width: 16.99vh; line-height: 16.99vh; top: 64.20vh; left: 47.08%; font-size: 03.55vh; }
+.point-6 { height: 15.01vh; width: 15.01vh; line-height: 15.01vh; top: 41.28vh; left: 13.96%; font-size: 03.35vh; }
+.point-7 { height: 26.27vh; width: 26.27vh; line-height: 26.27vh; top: 30.02vh; left: 40.83%; font-size: 05.93vh; }
+
+/* 板块一：往期回顾（轮播图文） */
+#PastReview {
+    width: 100%;
+    height: 100vh;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+}

@@ -8,11 +8,22 @@ input, textarea, button {
     resize: none;
 }
 
-
-.title {
-    width: 100px;
-    height: ;
+::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
 }
+
+::-webkit-scrollbar-thumb {
+    background-color: #00cc00;
+    opacity: 0.5;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
 
 @font-face {
     font-family: Adobe Heiti Std R;
@@ -58,7 +69,7 @@ input, textarea, button {
     width: 100%;
     height: 88.9vh;
     position: relative;
-    background-color: rgba(231, 255, 185, 0.925);
+    background-color: #e4f0ba;
 }
 
 .banner point {
@@ -79,8 +90,7 @@ input, textarea, button {
     position: absolute;
     height: 1vh;
     background-color: rgba(255, 255, 255,1);
-    /* background-color: rgba(241,248,216,1); */
-    z-index: 100;
+    z-index: 10;
     transform-origin: left;
 }
 
@@ -95,19 +105,389 @@ input, textarea, button {
     color: inherit;
 }
 
-.point-1 { height: 10.69vh; width: 10.69vh; line-height: 10.69vh; top: 10.07vh; left: 22.91%; font-size: 02.76vh; }
-.point-2 { height: 16.99vh; width: 16.99vh; line-height: 16.99vh; top: 06.51vh; left: 50.52%; font-size: 03.35vh; }
-.point-3 { height: 16.99vh; width: 16.99vh; line-height: 16.99vh; top: 12.05vh; left: 72.91%; font-size: 03.35vh; }
-.point-4 { height: 16.99vh; width: 16.99vh; line-height: 16.99vh; top: 42.47vh; left: 76.14%; font-size: 03.75vh; }
-.point-5 { height: 16.99vh; width: 16.99vh; line-height: 16.99vh; top: 64.20vh; left: 47.08%; font-size: 03.55vh; }
-.point-6 { height: 15.01vh; width: 15.01vh; line-height: 15.01vh; top: 41.28vh; left: 13.96%; font-size: 03.35vh; }
-.point-7 { height: 26.27vh; width: 26.27vh; line-height: 26.27vh; top: 30.02vh; left: 40.83%; font-size: 05.93vh; }
+.point-1 {
+    height: 10.69vh; 
+    width: 10.69vh; 
+    line-height: 10.69vh; 
+    top: 10.07vh; 
+    left: 22.91%; 
+    font-size: 02.76vh; 
+}
+
+.point-2 { 
+    height: 16.99vh; 
+    width: 16.99vh; 
+    line-height: 16.99vh; 
+    top: 06.51vh; 
+    left: 50.52%; 
+    font-size: 03.35vh; 
+}
+
+.point-3 { 
+    height: 16.99vh; 
+    width: 16.99vh; 
+    line-height: 16.99vh; 
+    top: 12.05vh; 
+    left: 72.91%; 
+    font-size: 03.35vh; 
+}
+
+.point-4 { 
+    height: 16.99vh; 
+    width: 16.99vh; 
+    line-height: 16.99vh; 
+    top: 42.47vh; 
+    left: 76.14%; 
+    font-size: 03.75vh; 
+}
+
+.point-5 { 
+    height: 16.99vh; 
+    width: 16.99vh; 
+    line-height: 16.99vh; 
+    top: 64.20vh; 
+    left: 47.08%; 
+    font-size: 03.55vh; 
+}
+
+.point-6 { 
+    height: 15.01vh; 
+    width: 15.01vh; 
+    line-height: 15.01vh; 
+    top: 41.28vh; 
+    left: 13.96%; 
+    font-size: 03.35vh; 
+}
+
+.point-7 { 
+    height: 26.27vh;
+    width: 26.27vh; 
+    line-height: 26.27vh;
+    top: 30.02vh;
+    left: 40.83%; 
+    font-size: 05.93vh; 
+}
 
 /* 板块一：往期回顾（轮播图文） */
 #PastReview {
+    background-color: #eef6cf;
+}
+
+.plate {
     width: 100%;
     height: 100vh;
-    background-color: azure;
     display: flex;
     flex-direction: column;
+}
+
+.title {
+    width: 300px;
+    height: 7.5vh;
+    background-color: #efb257;
+    margin: 7vh 0 0 12%;
+    font-size: 6vh;
+    font-family: 微软雅黑;
+    color: #FFF;
+    line-height: 7vh;
+    letter-spacing: 6px;
+}
+
+.title_num {
+    font-size: 30px;
+    padding: 0 2vh;
+    margin-right: 25px;
+    display: inline-block;
+    background-color: #facd8a;
+    transform: scale(1.5);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0.5px 0.5px 0.5px 0.5px;
+}
+
+#carousel {
+    width: 69%;
+    height: 70vh;
+    margin: 5vh auto;
+    border: #000 solid 1px;
+    background-color: #FFF;
+    line-height: 70vh;
+    font-size: 6vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel-indicators li {
+    background-color: rgba(200, 200, 200, 0.5);
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item {
+    background-size: cover;
+    background-position: center;
+    color: #000;
+}
+
+/* 板块三：团队介绍（名片图文） */
+#TeamIntroduction {
+    background-color: #f7f4a7;
+}
+
+#TeamIntroduction .content {
+    width: 72%;
+    max-height: 70vh;
+    margin: 7vh auto;
+    background-color: #ffc88f;
+    border: 1px solid #000;
+    border-radius: 3.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+#名片图片 {
+    width: 30%;
+    height: 25vh;
+    background-color: #FFF;
+    margin: 5vh 8vh;
+    box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
+    overflow: hidden;
+}
+
+#名片图片 img {
+    width: 100%;
+}
+
+#名片文字 {
+    width: 46%;
+    margin: 8vh 8vh 8vh 0;
+    font-size: 2.4vh;
+    font-family: SimHei;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1.5px;
+    line-height: 4.3vh;
+}
+
+
+/* 板块四：实践剪影（图片） */
+#PracticeSilhouette {
+    background-color: #f5debf;
+}
+
+#PracticeSilhouette .content {
+    width: 64%;
+    height: 60vh;
+    margin: 7vh auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Silhouette {
+    width: 49.2%;
+    height: 100%;
+    position: relative;
+}
+
+.Silhouette div {
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 1.8vh;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px 0.5px;
+}
+
+.Silhouette .photo1 {
+    width: 34%;
+    height: 53%;
+}
+
+.Silhouette .photo2 {
+    width: 63%;
+    height: 44%;
+}
+
+.Silhouette .photo-1 {
+    top: 0;
+    left: 0;
+}
+
+.Silhouette .photo-2 {
+    top: 0;
+    right: 0;
+}
+
+.Silhouette .photo-3 {
+    bottom: 0;
+    right: 0;
+}
+
+.Silhouette .photo-4 {
+    bottom: 0;
+    left: 0;
+}
+
+/* 板块五：实践新闻（图文链接） */
+#PracticeNews {
+    background-color: #eff0e2;
+}
+
+#PracticeNews .content {
+    width: 76%;
+    height: 69vh;
+    margin: 7vh auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#carousel-news, 
+#carousel-news .carousel-inner, 
+#carousel-news .carousel-inner .carousel-item {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+#carousel-news .carousel-inner .carousel-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.news {
+    width: 23%;
+    height: 100%;
+    background-color: #FFF;
+    box-shadow: rgb(0, 0, 0, 0.5) 1px 1px 2px 0.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.新闻图片 {
+    width: 85%;
+    height: 30%;
+    margin: 0 auto;
+    border: #000 solid 1px;
+    border-radius: 10px;
+}
+
+.新闻图片 img {
+    width: 100%;
+}
+
+.新闻文字 {
+    width: 85%;
+    max-height: 50%;
+    margin: 0 auto;
+    font-size: 2.4vh;
+    font-family: SimHei;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1.5px;
+    line-height: 4.3vh;
+    overflow: hidden;
+}
+
+.新闻链接 {
+    width: 85%;
+    max-height: 10%;
+    margin: 0 auto;
+    font-size: 1.6vh;
+    font-family: 微软雅黑;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.新闻链接 a {
+    letter-spacing: 0;
+    color: #000;
+    word-break: break-all;
+}
+
+
+/* 板块六：获奖队伍（海报图片） */
+#WinningTeam {
+    background-color: #c3dfc9;
+}
+
+#WinningTeam .content {
+    width: 70%;
+    height: 65vh;
+    margin: 7vh auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: #000 solid 1px;
+    background-color: #FFF;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 底部信息 */
+#footer {
+    width: 100%;
+    height: 49px;
+    border-top: rgba(3,3,3,1) solid 2px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maker {
+    min-width: 20%;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.maker span {
+    padding: 0 3%;
+    font-size: 2vh;
+    font-family: 微软雅黑;
+    font-weight: 400;
+    color: rgba( 1, 0, 0, 1 );
+    line-height: 3.56vh;
+}
+
+.copyright {
+    font-size: 2vh;
+    font-family: 微软雅黑;
+    font-weight: 400;
+    color: rgba(136,136,136,1);
+    line-height: 3.56vh;
+    text-align: center;
+}
+
+
+
+
+/* 电脑版侧边栏7个点  */
+#sidebar {
+    height: 30vh;
+    right: 5%;
+    top: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 110;
+}
+
+#sidebar .point {
+    display: block;
+    padding: 0.89vh;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+#sidebar .active {
+    background-color: rgba(205,205,205,1);
 }

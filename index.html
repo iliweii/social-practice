@@ -10,14 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
     <link rel="shortcut icon" href="https://youth.sdut.edu.cn/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>  
     <script src="./js/js.js"></script>
     <title>暑假社会实践专题</title>
 </head>
+
 <body>
 
     <!-- 导航栏 -->
@@ -25,7 +31,8 @@
         <a class="nav-logo" href="https://youth.sdut.edu.cn/"> <img src="./img/youthol_logo.png" alt="青春在线"> </a>
         <nav class="nav nav-pills nav-justified nav-header">
             <a class="nav-item" href="#PastReview">往期回顾</a>
-            <a class="nav-item" href="#PracticeNotes">实践须知</a>
+            <!-- todo: 链接过去学校下发的关于实践活动的材料 -->
+            <a class="nav-item" href="">实践须知</a>
             <a class="nav-item" href="#TeamIntroduction">团队介绍</a>
             <a class="nav-item" href="#PracticeSilhouette">实践剪影</a>
             <a class="nav-item" href="#PracticeNews">实践新闻</a>
@@ -33,11 +40,12 @@
         </nav>
     </header>
 
-    <!-- banner -->
+    <!-- banner部分 -->
     <section id="banner">
         <div class="banner">
             <point class="point-1"> <a class="point-a" href="#PastReview">往期回顾</a> </point>
-            <point class="point-2"> <a class="point-a" href="#PracticeNotes">实践须知</a> </point>
+            <!-- todo: 链接过去学校下发的关于实践活动的材料 -->
+            <point class="point-2"> <a class="point-a" href="">实践须知</a> </point>
             <point class="point-3"> <a class="point-a" href="#TeamIntroduction">团队介绍</a> </point>
             <point class="point-4"> <a class="point-a" href="#PracticeSilhouette">实践剪影</a> </point>
             <point class="point-5"> <a class="point-a" href="#PracticeNews">实践新闻</a> </point>
@@ -59,27 +67,214 @@
     </section>
 
     <!-- 板块一：往期回顾（轮播图文） -->
-    <section id="PastReview">
-        
+    <section id="PastReview" class="plate">
+
+        <!-- 板块标题 -->
+        <div class="title">
+            <span class="title_num">1</span>往期回顾
+        </div>
+
+        <!-- 板块内容 -->
+        <div class="content">
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+
+                <!-- 指示符 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- 轮播图片 -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image: url('')">
+                        <span>此处放轮播图-1</span>
+                    </div>
+                    <div class="carousel-item" style="background-image: url('')">
+                        <span>此处放轮播图-2</span>
+                    </div>
+                    <div class="carousel-item"
+                        style="background-image: url('https://www.honghong520.xyz/img/banner_img/banner003.jpg')">
+                        <span>填写文字</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- 板块二：实践须知（链接） -->
-    <section id="PracticeNotes" style="height:100vh"></section>
-
     <!-- 板块三：团队介绍（名片图文） -->
-    <section id="TeamIntroduction" style="height:100vh"></section>
+    <section id="TeamIntroduction" class="plate">
+
+        <!-- 板块标题 -->
+        <div class="title">
+            <span class="title_num">2</span>团队介绍
+        </div>
+
+        <!-- 板块内容 -->
+        <div class="content">
+
+            <!-- 名片图片 -->
+            <div id="名片图片">
+                <img src="" alt="名片图片">
+            </div>
+
+            <!-- 名片文字 -->
+            <div id="名片文字">
+                <p>此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                    此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                    此处放文字此处放文字此处放文字此处放文字此处放文字
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- 板块四：实践剪影（图片） -->
-    <section id="PracticeSilhouette" style="height:100vh"></section>
+    <section id="PracticeSilhouette" class="plate">
+
+        <!-- 板块标题 -->
+        <div class="title">
+            <span class="title_num">3</span>实践剪影
+        </div>
+
+        <!-- 板块内容 -->
+        <div class="content">
+
+            <!-- 8个实践剪影 -->
+            <div class="Silhouette">
+                <div class="photo1 photo-1"> <img src="" alt="实践剪影"> </div>
+                <div class="photo2 photo-2"> <img src="" alt="实践剪影"> </div>
+                <div class="photo1 photo-3"> <img src="" alt="实践剪影"> </div>
+                <div class="photo2 photo-4"> <img src="" alt="实践剪影"> </div>
+            </div>
+            <div class="Silhouette">
+                <div class="photo2 photo-1"> <img src="" alt="实践剪影"> </div>
+                <div class="photo1 photo-2"> <img src="" alt="实践剪影"> </div>
+                <div class="photo2 photo-3"> <img src="" alt="实践剪影"> </div>
+                <div class="photo1 photo-4"> <img src="" alt="实践剪影"> </div>
+            </div>
+        </div>
+    </section>
 
     <!-- 板块五：实践新闻（图文链接） -->
-    <section id="PracticeNews"></section>
+    <section id="PracticeNews" class="plate">
+
+        <!-- 板块标题 -->
+        <div class="title">
+            <span class="title_num">4</span>实践新闻
+        </div>
+
+        <!-- 板块内容 -->
+        <div class="content">
+            <div id="carousel-news" class="carousel slide" data-ride="carousel">
+                <!-- 实践新闻图文自动轮播 -->
+                <div class="carousel-inner">
+                    <!-- 每4个新闻图文占一个轮播图， 第一个轮播图class="carousel-item active", 以后轮播图class="carousel-item" -->
+                    <div class="carousel-item active">
+                        <div class="news">
+
+                            <!-- 新闻图片 -->
+                            <div class="新闻图片">
+                                <img src="" alt="新闻图片">
+                            </div>
+
+                            <!-- 新闻文字 -->
+                            <div class="新闻文字">
+                                <p>此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                                    此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                                    此处放文字此处放文字此处放文字此处放文字此处放文字
+                                </p>
+                            </div>
+
+                            <!-- 新闻链接 -->
+                            <span class="新闻链接">
+                                链接：<a href="https://youth.sdut.edu.cn/" target="_blank">https://youth.sdut.edu.cn/</a>
+                            </span>
+                        </div>
+                        <div class="news">
+                            <div class="新闻图片">
+                                <img src="" alt="新闻图片">
+                            </div>
+                            <div class="新闻文字">
+                                <p>此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                                    此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                                    此处放文字此处放文字此处放文字此处放文字此处放文字
+                                </p>
+                            </div>
+                            <span class="新闻链接">
+                                链接：<a href="https://youth.sdut.edu.cn/" target="_blank">https://youth.sdut.edu.cn/</a>
+                            </span>
+                        </div>
+                        <div class="news">
+                            <div class="新闻图片">
+                                <img src="" alt="新闻图片">
+                            </div>
+                            <div class="新闻文字">
+                                <p>此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                                    此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                                    此处放文字此处放文字此处放文字此处放文字此处放文字
+                                </p>
+                            </div>
+                            <span class="新闻链接">
+                                链接：<a href="https://youth.sdut.edu.cn/" target="_blank">https://youth.sdut.edu.cn/</a>
+                            </span>
+                        </div>
+                        <div class="news">
+                            <div class="新闻图片">
+                                <img src="" alt="新闻图片">
+                            </div>
+                            <div class="新闻文字">
+                                <p>此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                                    此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字此处放文字
+                                    此处放文字此处放文字此处放文字此处放文字此处放文字
+                                </p>
+                            </div>
+                            <span class="新闻链接">
+                                链接：<a href="https://youth.sdut.edu.cn/" target="_blank">https://youth.sdut.edu.cn/</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- 板块六：获奖队伍（海报图片） -->
-    <section id="WinningTeam"></section>
+    <section id="WinningTeam" class="plate">
+
+        <!-- 板块标题 -->
+        <div class="title">
+            <span class="title_num">5</span>获奖队伍
+        </div>
+
+        <!-- 板块内容 -->
+        <!-- 这里填写获奖团队海报图片地址 -->
+        <div class="content" style="background-image: url('')">
+            <span style="font-size: 7vh; line-height: 65vh; display: block; margin: 0 auto;">此处放海报</span>
+        </div>
+    </section>
 
     <!-- 底部信息 -->
-    <footer></footer>
+    <footer id="footer">
+        <address class="maker">
+            <span>策划：</span>
+            <span>美工：</span>
+            <span>程序：</span>
+        </address>
+        <address class="copyright">
+            山东理工大学学生工作部（处）、武装部　青春在线网站版权所有
+        </address>
+    </footer>
 
+    <!-- 电脑版侧边栏7个点 -->
+    <div id="sidebar">
+        <a class="point active" href="#header"></a>
+        <a class="point" href="#PastReview"></a>
+        <a class="point" href="#TeamIntroduction"></a>
+        <a class="point" href="#PracticeSilhouette"></a>
+        <a class="point" href="#PracticeNews"></a>
+        <a class="point" href="#WinningTeam"></a>
+        <a class="point" href="#footer"></a>
+    </div>
 </body>
+
 </html>

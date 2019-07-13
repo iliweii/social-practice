@@ -122,7 +122,6 @@ $(document).ready(function () {
   // 侧边栏
   var menuflag = 0;
   function menuclose() {
-    $('.nav-header .nav-item').eq($('.nav-header .nav-item').length - 1).remove();
     $('#header').css({
       "align-items": "center",
       "background-color": "#FFF"
@@ -204,6 +203,7 @@ $(document).ready(function () {
       }, 500);
       menuflag = 1;
     } else {
+      $('.nav-header .nav-item').eq($('.nav-header .nav-item').length - 1).remove();
       menuclose();
       menuflag = 0;
     }

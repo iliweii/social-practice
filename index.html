@@ -28,7 +28,9 @@
 
     <!-- 导航栏 -->
     <header id="header">
+        <i class="menu icon"></i>
         <a class="nav-logo" href="https://youth.sdut.edu.cn/"> <img src="./img/youthol_logo.png" alt="青春在线"> </a>
+        <i class="home icon"></i>
         <nav class="nav nav-pills nav-justified nav-header">
             <a class="nav-item" href="#PastReview">往期回顾</a>
             <!-- todo: 链接过去学校下发的关于实践活动的材料 -->
@@ -265,6 +267,20 @@
         </address>
     </footer>
 
+    <!-- 进入网页弹窗 -->
+    <div id="entry">
+        <div class="entrying">
+            <button class="exit" title="关闭" onclick="window.close()"> <span>×</span> </button>
+            <p>请稍等，</p>
+            <p>您的暑假社会实践报告正在赶来的路上...</p>
+            <div class="bar"></div>
+            <div class="track">
+                <div class="drop">0%</div>
+            </div>
+            <span class="true">完成</span>
+        </div>
+    </div>
+
     <!-- 电脑版侧边栏7个点 -->
     <div id="sidebar">
         <a class="point active" href="#header"></a>
@@ -275,6 +291,8 @@
         <a class="point" href="#WinningTeam"></a>
         <a class="point" href="#footer"></a>
     </div>
+
+
 </body>
 
 </html>

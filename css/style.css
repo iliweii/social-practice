@@ -33,6 +33,7 @@ input, textarea, button {
 /* 导航栏 */
 #header {
     display: flex;
+    justify-content: unset;
     height: 11.11vh;
     width: 100%;
     background-color: #FFFFFF;
@@ -76,13 +77,30 @@ input, textarea, button {
     display: block;
     position: absolute;
     background: rgba(121,196,113,1);
-    border-radius: 300px;
+    border-radius: 500px;
     font-family: Adobe Heiti Std R;
     font-weight: normal;
     color: rgba(241,248,216,1);
     white-space: nowrap;
     text-align: center;
     z-index: 20;
+}
+
+@keyframes point {
+    50% {
+        box-shadow: rgba(136, 136, 136, 0.3) 0 0 0 4vh,
+        rgba(204, 204, 204, 0.3) 0 0 0 8vh,
+        rgba(221, 221, 221, 0.3) 0 0 13vh 13vh;
+    }
+    100% {
+        box-shadow: rgba(136, 136, 136, 0.05) 0 0 0 4vh,
+        rgba(204, 204, 204, 0.05) 0 0 0 8vh,
+        rgba(221, 221, 221, 0.05) 0 0 13vh 13vh;
+    }
+}
+
+.banner point:hover {
+    animation: point 1.5s infinite ease;
 }
 
 .banner line {
@@ -466,8 +484,96 @@ input, textarea, button {
     text-align: center;
 }
 
+/* 进入网页弹窗 */
+#entry {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 200;
+}
 
+.entrying {
+    width: 60%;
+    background: #FFF;
+    margin: 20vh auto;
+    padding-bottom: 10vh;
+    border: #000 solid 1px;
+    display: flex;
+    flex-direction: column;
+}
 
+.entrying .exit {
+    align-self: flex-end;
+    border: #666 solid 1px;
+    background-color: #FFF;
+    font-size: 6vh;
+    font-weight: 100;
+    color: #666;
+    line-height: 3vh;
+    text-align: center;
+    margin: 1vh 1vh 8vh 1vh;
+    width: 3vh;
+    height: 3vh;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.entrying .exit span {
+    position: absolute;
+    top: -0.6vh;
+    left: -0.6vh;
+}
+
+.entrying p {
+    font-family: Adobe Heiti Std R;
+    font-size: 3vh;
+    font-weight: 400;
+    color: #000;
+    line-height: 3vh;
+    padding: 0 10%;
+}
+
+.entrying .bar {
+    width: 80%;
+    height: 3vh;
+    border-radius: 6vh;
+    margin: 0 auto;
+    background-color: #31b573;
+}
+
+.entrying .track {
+    width: 88%;
+    height: 5vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.entrying .drop {
+    position: absolute;
+    left: 0;
+    width: 9.09%;
+    height: 5vh;
+    background-color: rgba(0,0,0,0);
+    background-image: url('../img/水滴.png');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-size: 0.8vh;
+    text-align: center;
+    line-height: 6vh;
+}
+
+.entrying .true {
+    display: inline;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: 700;
+    color: #FFF;
+}
 
 /* 电脑版侧边栏7个点  */
 #sidebar {
@@ -490,4 +596,254 @@ input, textarea, button {
 
 #sidebar .active {
     background-color: rgba(205,205,205,1);
+}
+
+
+
+
+/* 手机端页面 */
+
+@media (max-width: 992px) {
+
+    /* 导航栏 */
+    #header {
+        height: 62px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .icon {
+        height: 30px;
+        width: 30px;
+        padding: 11px 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .nav-header {
+        display: none;
+    }
+
+    #header .menu {
+        background-image: url(../img/菜单.png);
+    }
+
+    #header .home {
+        background-image: url(../img/首页.png);
+    }
+
+    .nav-logo img {
+        position: unset;
+        height: 62px;
+    }
+
+
+    /* banner部分 */
+    .banner {
+        height: 100%;
+    }
+
+    @keyframes point {
+        50% {
+            box-shadow: rgba(136, 136, 136, 0.3) 0 0 0 20px,
+            rgba(204, 204, 204, 0.3) 0 0 0 40px,
+            rgba(221, 221, 221, 0.3) 0 0 60px 60px;
+        }
+        100% {
+            box-shadow: rgba(136, 136, 136, 0.05) 0 0 0 20px,
+            rgba(204, 204, 204, 0.05) 0 0 0 40px,
+            rgba(221, 221, 221, 0.05) 0 0 60px 60px;
+        }
+    }
+    
+    .banner line {
+        height: 2px;
+    }
+
+    .point-1 {
+        height: calc(10.69vh *0.5); 
+        width: calc(10.69vh *0.5); 
+        line-height: calc(10.69vh *0.5); 
+        top: calc(10.07vh *0.5); 
+        left: 22.91%; 
+        font-size: calc(02.76vh *0.5); 
+    }
+
+    .point-2 { 
+        height: calc(16.99vh *0.5); 
+        width: calc(16.99vh *0.5); 
+        line-height: calc(16.99vh *0.5); 
+        top: calc(06.51vh *0.5); 
+        left: 50.52%; 
+        font-size: calc(03.35vh *0.5); 
+    }
+
+    .point-3 { 
+        height: calc(16.99vh *0.5); 
+        width: calc(16.99vh *0.5); 
+        line-height: calc(16.99vh *0.5); 
+        top: calc(12.05vh *0.5); 
+        left: 72.91%; 
+        font-size: calc(03.35vh *0.5); 
+    }
+
+    .point-4 { 
+        height: calc(16.99vh *0.5); 
+        width: calc(16.99vh *0.5); 
+        line-height: calc(16.99vh *0.5); 
+        top: calc(42.47vh *0.5); 
+        left: 76.14%; 
+        font-size: calc(03.75vh *0.5); 
+    }
+
+    .point-5 { 
+        height: calc(16.99vh *0.5); 
+        width: calc(16.99vh *0.5); 
+        line-height: calc(16.99vh *0.5); 
+        top: calc(64.20vh *0.5); 
+        left: 47.08%; 
+        font-size: calc(03.55vh *0.5); 
+    }
+
+    .point-6 { 
+        height: calc(15.01vh *0.5); 
+        width: calc(15.01vh *0.5); 
+        line-height: calc(15.01vh *0.5); 
+        top: calc(41.28vh *0.5); 
+        left: 13.96%; 
+        font-size: calc(03.35vh *0.5); 
+    }
+
+    .point-7 { 
+        height: calc(26.27vh *0.5);
+        width: calc(26.27vh *0.5); 
+        line-height: calc(26.27vh *0.5);
+        top: calc(30.02vh *0.5);
+        left: 40.83%; 
+        font-size: calc(05.93vh *0.5); 
+    }
+
+    #banner, .plate {
+        height: 313px;
+    }
+
+    /* 板块一：往期回顾（轮播图文） */
+    .title {
+        width: fit-content;
+        padding-right: 5px;
+        height: 3.75vh;
+        margin: 3.5vh 0 0 12%;
+        font-size: 3vh;
+        line-height: 3.5vh;
+        letter-spacing: 2px;
+    }
+    
+    .title_num {
+        font-size: 15px;
+        padding: 0 6px;
+        margin-right: 10px;
+    }
+
+    #carousel {
+        width: 85%;
+        height: 210px;
+        margin: 15px auto;
+    }
+
+    /* 板块三：团队介绍（名片图文） */
+    #TeamIntroduction .content {
+        width: 77%;
+        margin: 25px auto;
+        border-radius: 10px;
+    }
+    
+    #名片图片 {
+        width: 50%;
+        height: 90px;
+        margin: 10px;
+        box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 3px;
+    }
+    
+    #名片文字 {
+        width: 50%;
+        margin: 10px;
+        font-size: 8px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        line-height: 15px;
+    }
+
+    /* 板块四：实践剪影（图片） */
+    .Silhouette div {
+        border-radius: 5px;
+    }
+
+    #PracticeSilhouette .content {
+        width: 80%;
+        height: 190px;
+        margin: 20px auto;
+    }
+
+    /* 板块五：实践新闻（图文链接） */
+    #PracticeNews .content {
+        width: 80%;
+        height: 200px;
+        margin: 20px auto;
+    }
+
+    .新闻图片 {
+        border-radius: 5px;
+    }
+
+    .新闻文字 {
+        width: 90%;
+        font-size: 8px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 15px;
+    }
+
+    .新闻链接 {
+        font-size: 8px;
+        font-weight: 100;
+        letter-spacing: 0px;
+    }
+
+    /* 板块六：获奖队伍（海报图片） */
+    #WinningTeam .content {
+        width: 80%;
+        height: 200px;
+        margin: 20px auto;
+    }
+
+    #WinningTeam .content span {
+        font-size: 22px!important;
+        line-height: 22px!important;
+    }
+
+
+    /* 底部信息  */
+    #footer {
+        height: 66px;
+    }
+
+    .maker {
+        width: 80%;
+    }
+
+    .maker span {
+        font-size: 13px;
+        line-height: 13px;
+    }
+
+    .copyright {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    /* 电脑版侧边栏7个点 */
+    #sidebar {
+        display: none;
+    }
 }

@@ -59,6 +59,11 @@ function lineappear() {
 }
 
 $(document).ready(function () {
+  // 全屏滚动
+  $(function(){
+    $('#dowebok').fullpage();
+  });
+
   // 进入页面动画
   var dropi = 0;
   var dropval = setInterval(drop, 20);
@@ -77,12 +82,13 @@ $(document).ready(function () {
     "top": "0"
   }, 2400);
   $('#entry').animate({
-    "top": "-100%"
+    "top": "-200%"
   }, 800);
 
 
   // 锚点平滑滚动
   $("a[href*='#'],area[href*='#']").click(function () {
+    menuclose();
     console.log(this.pathname)
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var $target = $(this.hash);
@@ -112,6 +118,99 @@ $(document).ready(function () {
     }
     linedisappear(800);
   });
+
+  // 侧边栏
+  var menuflag = 0;
+  function menuclose() {
+    $('.nav-header .nav-item').eq($('.nav-header .nav-item').length - 1).remove();
+    $('#header').css({
+      "align-items": "center",
+      "background-color": "#FFF"
+    });
+    $("#header").animate({
+      "height": "62px"
+    }, 500);
+    $('.nav-header').css({
+      "display": "none",
+      "position": "unset",
+      "flex-direction": "row",
+      "width": "85%",
+      "height": "auto"
+    });
+    $('.nav .nav-item').css({
+      "line-height": "11.11vh",
+      "flex-grow": "1",
+      "width": "auto",
+      "border-bottom": "0",
+      "text-align": "center"
+    });
+    $('.menu').css({
+      "background-image": "url('./img/菜单.png')"
+    });
+    $('.menu').animate({
+      "top": "0"
+    }, 500);
+    $('.nav-logo img').animate({
+      "top": "0",
+      "height": "62px"
+    }, 500);
+    $('.home').animate({
+      "opacity": "1"
+    }, 500);
+  }
+  $('.menu').click(function () {
+    if (menuflag == 0) {
+      $('.nav-header .nav-item').eq($('.nav-header .nav-item').length - 1).after("<a class='nav-item'>关于我们</a>");
+      $('#header').css({
+        "align-items": "flex-start",
+        "background-color": "#f6f6f6"
+      });
+      $("#header").animate({
+        "height": "200px"
+      }, 500);
+      $('.nav-header').css({
+        "display": "flex",
+        "position": "absolute",
+        "top": "200px",
+        "left": "0",
+        "flex-direction": "column",
+        "background-color": "#FFF",
+        "width": "100%",
+        "height": "600px",
+        "justify-content": "flex-start",
+        "align-items": "flex-start"
+      });
+      $('.nav .nav-item').css({
+        "line-height": "60px",
+        "flex-grow": "0",
+        "width": "90%",
+        "border-bottom": "#ccc solid 1px",
+        "text-align": "left"
+      });
+      $('.menu').css({
+        "background-image": "url('./img/错.png')",
+        "position": "relative"
+      });
+      $('.menu').animate({
+        "top": "50px"
+      }, 500);
+      $('.nav-logo img').css("position", "relative");
+      $('.nav-logo img').animate({
+        "top": "100px",
+        "height": "62px"
+      }, 500);
+      $('.home').animate({
+        "opacity": "0"
+      }, 500);
+      menuflag = 1;
+    } else {
+      menuclose();
+      menuflag = 0;
+    }
+  });
+  $('.home').click(function () {
+    window.open("https://youth.sdut.edu.cn/", "_self");
+  })
 
 });
 

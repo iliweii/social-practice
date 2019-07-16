@@ -60,7 +60,7 @@ function lineappear() {
 
 $(document).ready(function () {
   // 全屏滚动
-  $(function(){
+  $(function () {
     $('#dowebok').fullpage();
   });
 
@@ -89,6 +89,12 @@ $(document).ready(function () {
   // 锚点平滑滚动
   $("a[href*='#'],area[href*='#']").click(function () {
     menuclose();
+    var width = $(window).width();
+    if (width >= 992) {
+      $('.nav-header').css("display", "flex");
+    } else {
+      $('.nav-header').css("display", "none");
+    }
     console.log(this.pathname)
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var $target = $(this.hash);
@@ -224,4 +230,10 @@ $(window).scroll(function () {
 $(window).resize(function () {
   allline();
   linedisappear(0);
+  var width = $(window).width();
+  if (width >= 992) {
+    $('.nav-header').css("display", "flex");
+  } else {
+    $('.nav-header').css("display", "none");
+  }
 });
